@@ -7,6 +7,7 @@ Updated by: Ellis Brown, Max deGroot
 """
 from .config import HOME
 import os.path as osp
+import os
 import sys
 import torch
 import torch.utils.data as data
@@ -25,7 +26,7 @@ VOC_CLASSES = (  # always index 0
     'sheep', 'sofa', 'train', 'tvmonitor')
 
 # note: if you used our download scripts, this should be right
-curr_path = osp.path.abspath(os.path.dirname(__file__))
+curr_path = os.path.abspath(os.path.dirname(__file__))
 VOC_ROOT = osp.join(curr_path, "../VOCdevkit/")
 
 
