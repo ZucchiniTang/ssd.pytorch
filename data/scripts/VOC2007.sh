@@ -9,7 +9,7 @@ if [ -z "$1" ]
     # navigate to /dataset
     echo "navigating to /dataset/ ..." 
     mkdir -p dataset
-    cd /dataset/
+    cd ./dataset/
   else
     # check if is valid directory
     if [ ! -d $1 ]; then
