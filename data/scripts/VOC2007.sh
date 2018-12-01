@@ -8,8 +8,8 @@ if [ -z "$1" ]
   then
     # navigate to /dataset
     echo "navigating to /dataset/ ..." 
-    mkdir -p ../dataset
-    cd ../dataset/
+    mkdir -p dataset
+    cd /dataset/
   else
     # check if is valid directory
     if [ ! -d $1 ]; then
