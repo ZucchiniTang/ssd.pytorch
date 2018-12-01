@@ -25,6 +25,7 @@ VOC_CLASSES = (  # always index 0
     'sheep', 'sofa', 'train', 'tvmonitor')
 
 # note: if you used our download scripts, this should be right
+curr_path = osp.path.abspath(os.path.dirname(__file__))
 VOC_ROOT = osp.join(curr_path, "../VOCdevkit/")
 
 
