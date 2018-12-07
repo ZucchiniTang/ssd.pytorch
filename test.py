@@ -49,7 +49,7 @@ def test_net(save_folder, net, cuda, testset, transform, thresh):
         with open(filename, mode='a') as f:
             f.write('\nGROUND TRUTH FOR: '+img_id+'\n')
             for box in annotation:
-                f.write('label: '+' || '.join(str(b) for b in box)+'\n')
+                f.write('label_annotation: '+' || '.join(str(b) for b in box)+'\n')
         if cuda:
             x = x.cuda()
 
@@ -71,7 +71,7 @@ def test_net(save_folder, net, cuda, testset, transform, thresh):
                 coords = (pt[0], pt[1], pt[2], pt[3])
                 pred_num += 1
                 with open(filename, mode='a') as f:
-                    f.write(str(pred_num)+' label: '+label_name+' score: ' +
+                    f.write(str(pred_num)+' label_coords: '+label_name+' score: ' +
                             str(score) + ' '+' || '.join(str(c) for c in coords) + '\n')
                 j += 1
 
