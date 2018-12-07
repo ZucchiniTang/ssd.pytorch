@@ -195,8 +195,7 @@ def train():
             print('Saving state, iter:', iteration)
             torch.save(ssd_net.state_dict(), 'weights/ssd300_COCO_' +
                        repr(iteration) + '.pth')
-    torch.save(ssd_net.state_dict(),
-               args.save_folder + '' + args.dataset + '.pth')
+    torch.save(ssd_net.state_dict(),'weights/ssd300_VOC'+'.pth')
 
 
 def adjust_learning_rate(optimizer, gamma, step):
