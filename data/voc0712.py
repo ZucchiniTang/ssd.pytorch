@@ -28,7 +28,7 @@ VOC_CLASSES = (  # always index 0
 
 # note: if you used our download scripts, this should be right
 curr_path = os.path.abspath(os.path.dirname(__file__))
-VOC_ROOT = osp.join(curr_path, "../VOCdevkit/")
+VOC_ROOT = osp.join(curr_path, "../dataset/VOCdevkit/")
 
 
 class VOCAnnotationTransform(object):
